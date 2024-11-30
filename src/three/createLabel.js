@@ -12,6 +12,7 @@ const createLabel = (name, point, depth) => {
   const [x, y] = offsetXY(point);
 
   label.position.set(x, -y, depth);
+  label.renderOrder = 1;
   return label;
 };
 

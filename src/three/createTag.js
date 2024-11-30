@@ -22,7 +22,7 @@ const tag = (name, x, y, z) => {
     Object.assign(div.style, {
         position: 'absolute'
     });
-
+    div.style.zIndex = '9999999999'; 
     div.innerHTML = `<div class="popWin" style="background-color: red;">
     <div class="popWins">
       <div class="titleInfos">
@@ -56,7 +56,7 @@ const tag = (name, x, y, z) => {
 
     const label = new CSS2DObject(div); //div元素包装为CSS2模型对象CSS2DObject
     label.name = 'tag'
-
+    // label.element.style.zIndex = 9999999999; // 设置为10
     // 设置HTML元素标签在three.js世界坐标中位置
     label.position.set(x, y, z);
 
@@ -108,6 +108,7 @@ const tag = (name, x, y, z) => {
         // 隐藏 tooltip
         // tooltip.style.display = 'none';
     // });
+    label.renderOrder = 999;
     return label; //返回CSS2模型标签
 };
 

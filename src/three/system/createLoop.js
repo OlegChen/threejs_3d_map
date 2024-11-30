@@ -67,7 +67,7 @@ function createLoop(scene, camera, renderer, controls, labelRenderer) {
 
   window.addEventListener('pointermove', (event) => {
 
-    // scene.getObjectByName('map').remove(scene.getObjectByName('tag'))
+    scene.getObjectByName('map').remove(scene.getObjectByName('tag'))
 
     let info = document.querySelector('#info')
     // 将鼠标位置归一化为设备坐标。x 和 y 方向的取值范围是 (-1 to +1)
